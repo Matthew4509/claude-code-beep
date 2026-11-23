@@ -1,0 +1,15 @@
+Set up friendly beeps for Claude Code on this Windows PC, in my user settings (`~/.claude/settings.json`), so that every project gets them. Use the update-config skill if you have it.
+
+Add two hooks, and MERGE them with any hooks already there. Never replace or remove an existing hook.
+
+1. **Finished (Stop hook):** a melodic beep once Claude has completed a task.
+   - type: command, shell: powershell, timeout: 5
+   - command: `[console]::beep(659,90); [console]::beep(784,90); [console]::beep(1047,150)`
+
+2. **Needs me (Notification hook):** a call for help when waiting for a response.
+   - type: command, shell: powershell, timeout: 5
+   - command: `[console]::beep(988,130); [console]::beep(740,130); [console]::beep(988,130); [console]::beep(740,300)`
+
+Afterwards, show me the hooks section of the file. Check it is valid JSON. Then play each command once, so I can hear both sounds.
+
+On a Mac, use `afplay /System/Library/Sounds/Glass.aiff` for Finished and `afplay /System/Library/Sounds/Ping.aiff` for Needs me, with no shell setting.
