@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[console]::beep(659,90); [console]::beep(784,90); [console]::beep(1047,150)",
+            "shell": "powershell",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[console]::beep(988,130); [console]::beep(740,130); [console]::beep(988,130); [console]::beep(740,300)",
+            "shell": "powershell",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
