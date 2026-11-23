@@ -12,7 +12,7 @@ No downloads, no sound files. It uses the built-in PowerShell `[console]::beep(f
 ### Option 1: script (merges into your existing settings)
 
 ```powershell
-git clone https://github.com/<your-user>/claude-code-beep.git
+git clone https://github.com/Matthew4509/claude-code-beep.git
 cd claude-code-beep
 powershell -ExecutionPolicy Bypass -File .\install.ps1
 ```
